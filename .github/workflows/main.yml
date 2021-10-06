@@ -6,8 +6,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: install modules
-      working-directory: ./docker-meetup
       run: npm install
     - name: Run tests
-      working-directory: ./docker-meetup
       run: npm run test:unit   
