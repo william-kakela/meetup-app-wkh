@@ -33,8 +33,8 @@ it('should show a meeting in meetings', () => {
       }
     }
   })
-  const getBookedMeetings = wrapper.findAll('li').length;
-  expect(getBookedMeetings)//.toBe(1)
+  const getBookedMeetings = wrapper.findAll('#meeting-test').length;
+  expect(getBookedMeetings).toBe(1);
 });
 
 it('triggers add review method on click', async () => {
@@ -49,3 +49,4 @@ it('should get the meetings when server created', () => {
   shallowMount(Meetup)
   expect(spy).toBeCalled();
 });
+

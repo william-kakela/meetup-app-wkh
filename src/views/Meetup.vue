@@ -16,10 +16,10 @@
     <section>
       <h2>Avklarade Meetups</h2>
       <ul>
-        <li
+        <li id="meeting-test"
           v-for="(meeting, i) in bookedMeetings"
           :key="i"
-          class="meeting-list"
+          class ="meeting-list"
         >
           <div>
             <p>{{ meeting.title }}</p>
