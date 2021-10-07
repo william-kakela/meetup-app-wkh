@@ -101,10 +101,10 @@ export default {
     },
     addItemsToLocalStorage () {
       const meetings = [
-        { date: '07-02-2021', title: 'My meeting 1', review: '' },
-        { date: '09-03-2021', title: 'My meeting 2', review: '' },
-        { date: '02-04-2021', title: 'My meeting 3', review: '' },
-        { date: '03-01-2021', title: 'My meeting 4', review: '' }
+        { date: '07-02-2021', title: 'ChatMeetup', review: '' },
+        { date: '09-03-2021', title: 'Nightmeetup', review: '' },
+        { date: '02-04-2021', title: 'FoodMeetup', review: '' },
+        { date: '03-01-2021', title: 'CarMeetup', review: '' }
       ]
       const meetingsJson = JSON.stringify(meetings)
       localStorage.setItem('meetings', meetingsJson)

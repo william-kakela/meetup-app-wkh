@@ -26,7 +26,7 @@ it('should show a meeting in meetings', () => {
        bookedMeetings: [
           {
             date: '03-01-2021',
-            title: 'My meeting 4',
+            title: 'CarMeetup',
             review: ''
           }
         ]
@@ -37,7 +37,7 @@ it('should show a meeting in meetings', () => {
   expect(getBookedMeetings).toBe(1);
 });
 
-it('triggers add review method on click', async () => {
+it('triggers reviewAmeeting method on click to make a review', async () => {
   const newMethod = jest.spyOn(Meetup.methods, 'reviewAMeeting');
   const wrapper = shallowMount(Meetup);
   await wrapper.find('button').trigger('click')
@@ -49,4 +49,12 @@ it('should get the meetings when server created', () => {
   shallowMount(Meetup)
   expect(spy).toBeCalled();
 });
+
+it('Finds the button to add a review to the meeting', async () => {
+  const method = jest.spyOn(Meetup.methods, 'addReview');
+  const wrapper = shallowMount(Meetup);
+  await wrapper.find('.modal-button')
+  expect(method)
+});
+
 
